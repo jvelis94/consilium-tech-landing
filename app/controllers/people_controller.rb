@@ -6,6 +6,7 @@ class PeopleController < ApplicationController
     
     def home
         @person = Person.new
+        # @secret = ENV['PASSWORD']
     end
 
     # def new
@@ -17,7 +18,7 @@ class PeopleController < ApplicationController
         respond_to do |format|
             if @person.save
               format.html { redirect_to(root_url, notice: 'Thank you for signing up!') }
-              
+              UserMailer.with(person: @person).welcome_email.deliver_now
             else
               format.html { render action: 'home' }
               print @person.errors.full_messages

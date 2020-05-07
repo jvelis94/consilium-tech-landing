@@ -56,3 +56,4 @@ gem 'simple_form'
 gem 'bootstrap',  '~>4.3.1'
 gem "font-awesome-rails"
 gem 'font_awesome5_rails'
+gem 'dotenv-rails', groups: [:development, :test]
