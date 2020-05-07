@@ -8,7 +8,9 @@ const loadDynamicBannerText = () => {
   });
 }
 
-document.querySelector(".close").addEventListener("click", myFunction);
+if (document.querySelector(".close")) {
+  document.querySelector(".close").addEventListener("click", myFunction);
+} 
 
 function myFunction() {
   document.querySelector(".alert").style.display = "none";
