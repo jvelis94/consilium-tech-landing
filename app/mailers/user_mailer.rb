@@ -11,4 +11,10 @@ class UserMailer < ApplicationMailer
         # mail(to: @person.email, subject: 'Welcome to Consilium Intelligence')
         mail(to: email_with_name, subject: 'Welcome to Consilium Intelligence')
     end
+
+    def new_email_consilium
+        @person = params[:person]
+        mail(to: 'jvelis@consiliumintelligence.com', subject: 'Someone just registered for tech updates!')
+    end
+
 end
