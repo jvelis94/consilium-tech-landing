@@ -1,0 +1,114 @@
+
+// .page-container {
+//     margin-left: 50px;
+// }
+
+.container-landing {
+    // width: 500px;
+    margin-top: 32px;
+    margin-left: 120px;
+  }
+
+.banner {
+background-size: cover;
+background-position: center;
+height: 80vh;
+padding:150px 0px;
+}
+
+.banner h1 {
+margin-bottom: 4px;
+color: white;
+text-shadow: 1px 1px 6px rgba(0,0,0,1);
+font-size: 42px;
+font-weight: bold;
+}
+
+.banner p {
+font-size: 20px;
+color: white;
+opacity: .7;
+text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+font-family: 'Kodchasan', sans-serif;
+width: 75%
+}
+
+.collection_radio_buttons {
+    margin: 0px 4px;
+}
+
+#about-us {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    padding:0
+    // justify-content: space-between;
+}
+
+.material-icons, i {
+    font-size: 100px !important;
+    text-align: center;
+    color: #34373D;
+}
+
+.card {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+}
+
+#benefits {
+    text-align: center;
+    padding: 48px;
+}
+
+.card-body {
+    text-align: center;
+}
+
+#form-container {
+    // display: flex;
+    margin: 75px;
+    // justify-content: center;
+    // align-items: center;
+    padding: 48px;
+    width: 450px;
+    background-color: #F6FAFC;
+    border-radius: .25rem;
+    border: 1px solid rgba(0,0,0,.125)
+}
+
+.input {
+    padding: 6px 0px;
+    margin: 0;
+}
+
+label, h5 {
+    margin: 0;
+    padding-top: 4px;
+    font-weight: bold;
+}
+
+.card {
+    background-color: #F6FAFC;
+}
+
+.collection_radio_buttons {
+    font-weight: 400;
+    padding-bottom: 12px;
+}
+
+.banner2 {
+    padding: 32px;
+    background-size: cover;
+}
+
+.justify-content-center {
+    padding-bottom: 64px
+}
+
+.btn {
+    background-color: #4F72BF;
+    border: none;
+}
+

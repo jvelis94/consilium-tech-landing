@@ -1,0 +1,79 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../../../assets/code.png);">
+  <div class="container-landing">
+    <h1>
+      Re-imagining <span id="banner-typed-text"></span>
+    </h1>
+    <p>Taking the best pieces of recruting tools, business intelligence tools and CRM applications, we are building a one stop shop for everything people.</p>
+  </div>
+</div>
+
+
+
+<div class="justify-content-center">
+  <h1 id='benefits'>Benefits for everyone</h1>
+  <ul id='about-us'>
+    <li>
+      <div class="card" style="width: 18rem;">
+        <i class="fa fa-user card-img-top"></i>
+        <div class="card-body">
+          <h4 class="card-title">Talented individuals</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="card" style="width: 18rem;">
+        <i class="material-icons">supervised_user_circle</i>
+        <div class="card-body">
+          <h4 class="card-title">Recruiters</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="card" style="width: 18rem;">
+        <i class="material-icons">insert_chart_outlined</i>
+        <div class="card-body">
+          <h4 class="card-title">Strategy teams</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="card" style="width: 18rem;">
+        <i class="material-icons">business_center</i>
+        <div class="card-body">
+          <h4 class="card-title">Salespeople</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<div class="banner2" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.1)), url(../../../assets/map.jpg);">
+  <div id='form-container'>
+    <h4>Lets build the future of people together</h4>
+    <br>
+    <%= simple_form_for @person do |f| %>
+          <%= f.label "First name:" %>
+          <%= f.input :first_name, placeholder: 'First name', label: false, error: 'Username is mandatory, please specify one', input_html: {id:'sign-up-form'} %>
+          <%= f.label "Last name:" %>
+          <%= f.input :last_name, placeholder: 'Last Name', label: false %>
+          <%= f.label "Email:" %>
+          <%= f.input :email, label: false, placeholder: 'email@address.com' %>
+          <%= f.label "City:" %>
+          <%= f.input :city, label: false, placeholder: 'San Francisco' %>
+          <%= f.label "Current or Most Recent Company:" %>
+          <%= f.input :recent_company, label: false, placeholder: 'Consilium' %>
+          <%= f.collection_radio_buttons :current, [[true, 'Current employer'], [false, 'Last Employer']], :first, :last, input_html: { class: 'buttons' }%> 
+          <%= f.label "Job Function:" %>
+          <%= f.input :job_title, collection: ['Software', 'DevOps', 'IT', 'Product', 'Management', 'Other'], label: false %>
+          <%= f.label "Expertise:" %>
+          <%= f.input :expertise, label: false, placeholder: 'Back-End' %>
+          <%= f.button :submit, 'Stay in the loop!', class: 'btn btn-primary'%>
+    <% end %>
+  </div>
+</div>
