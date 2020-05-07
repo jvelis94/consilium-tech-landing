@@ -19,6 +19,7 @@ class PeopleController < ApplicationController
             if @person.save
               format.html { redirect_to(root_url, notice: 'Thank you for signing up!') }
               UserMailer.with(person: @person).welcome_email.deliver_now
+              UserMailer.with(person: @person).new_email_consilium.deliver_now
             else
               format.html { render action: 'home' }
               print @person.errors.full_messages

@@ -1,0 +1,26 @@
+<table>
+    <thead>
+        <tr>
+            <td>First Name</td>
+            <td>Last Name</td>
+            <td>Email</td>
+            <td>City</td>
+            <td>Most Recent Job</td>
+            <td>Current?</td>
+            <td>Job Title</td>
+            <td>Expertise</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>            
+            <td> <%= @person.first_name %> </td>
+            <td> <%= @person.last_name %> </td>
+            <td> <%= @person.email %> </td>
+            <td> <%= @person.city %> </td>
+            <td> <%= @person.recent_company %> </td>
+            <td> <%= @person.current %> </td>
+            <td> <%= @person.job_title %> </td>
+            <td> <%= @person.expertise %> </td>
+        </tr>
+    </tbody>
+</table>
