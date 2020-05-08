@@ -157,4 +157,36 @@ label, h5 {
         margin: 0 auto;
     }
 
+    #benefits {
+        font-size: 6em;
+    }
+
+    h4 {
+        font-size: 3em;
+    }
+
+    p {
+        font-size: 2em;
+    }
+
+    .material-icons, i {
+        font-size: 150px !important;
+    }
+
+    #form-container h4 {
+        font-size: 3em;
+    }
+
+    #form-container label {
+        font-size: 2em;
+        font-weight: 500;
+    }
+
+    #form-container {
+        width: 100%;
+    }
+
+    label.job_function {
+        display: block;
+    }
 }
