@@ -10,10 +10,10 @@
   }
 
 .banner {
-background-size: cover;
-background-position: center;
-height: 80vh;
-padding:150px 0px;
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    padding:150px 0px;
 }
 
 .banner h1 {
@@ -91,6 +91,7 @@ label, h5 {
 
 .card {
     background-color: #F6FAFC;
+    width: 18rem;
 }
 
 .collection_radio_buttons {
@@ -112,3 +113,48 @@ label, h5 {
     border: none;
 }
 
+@media (max-width: 1200px) {
+    .banner h1 {
+        margin-bottom: 4px;
+        color: white;
+        text-shadow: 1px 1px 6px rgba(0,0,0,1);
+        font-size: 120px;
+        font-weight: bold;
+        }
+        
+    .banner p {
+    font-size: 56px;
+    color: white;
+    opacity: .7;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    font-family: 'Kodchasan', sans-serif;
+    width: 75%
+    }
+
+    #about-us {
+        display: flex;
+        flex-direction: column;
+        // text-align: center;    
+        align-items: center;
+    }
+
+    #about-us li {
+        padding: 32px;
+        // display: inline-block;
+        // margin: 0 auto;
+    }
+    .card {
+        width: 80%;
+        margin: 0 auto;
+        padding: 56px;
+    }
+
+    .banner2 {
+        padding: 75px;
+    }
+    
+    #form-container {
+        margin: 0 auto;
+    }
+
+}
