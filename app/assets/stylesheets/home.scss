@@ -113,6 +113,12 @@ label, h5 {
     border: none;
 }
 
+#share-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+
 @media (max-width: 1200px) {
     .banner h1 {
         margin-bottom: 4px;
