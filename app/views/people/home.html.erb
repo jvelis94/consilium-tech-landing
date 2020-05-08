@@ -59,7 +59,7 @@
     <br>
     <%= simple_form_for @person do |f| %>
           <%= f.label "First name:" %>
-          <%= f.input :first_name, placeholder: 'First name', label: false, error: 'Username is mandatory, please specify one', input_html: {id:'sign-up-form'} %>
+          <%= f.input :first_name, placeholder: 'First name', label: false, error: 'Name is mandatory, please specify one', input_html: {id:'sign-up-form'} %>
           <%= f.label "Last name:" %>
           <%= f.input :last_name, placeholder: 'Last Name', label: false %>
           <%= f.label "Email:" %>
@@ -69,7 +69,7 @@
           <%= f.label "Current or Most Recent Company:" %>
           <%= f.input :recent_company, label: false, placeholder: 'Consilium' %>
           <%= f.collection_radio_buttons :current, [[true, 'Current employer'], [false, 'Last Employer']], :first, :last, input_html: { class: 'buttons' }%> 
-          <%= f.label "Job Function:" %>
+          <%= f.label "Job Function:", class:'job_function' %>
           <%= f.input :job_title, collection: ['Software', 'DevOps', 'IT', 'Product', 'Management', 'Other'], label: false %>
           <%= f.label "Expertise:" %>
           <%= f.input :expertise, label: false, placeholder: 'Back-End' %>

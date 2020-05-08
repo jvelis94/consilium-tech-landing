@@ -28,9 +28,28 @@ body {
     margin: 12px 24px;
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* position: fixed; */
+}
+.btn-nav {
+    margin-right: 250px;
+    padding: 12px 40px;
+}
+
 @media (max-width: 1200px) {
     .home-img {
         width: 75%; 
         margin: 48px 24px;
+    }
+
+    .btn-nav {
+        display: none;
+    }
+
+    .container-landing h1 {
+        height: 600px;
     }
 }
