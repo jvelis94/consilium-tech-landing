@@ -6,6 +6,7 @@ class PeopleController < ApplicationController
     
     def home
         @person = Person.new
+        @friend = Friend.new
         # @secret = ENV['PASSWORD']
     end
 
@@ -32,4 +33,5 @@ class PeopleController < ApplicationController
     def person_params
         params.require('person').permit(:first_name, :last_name, :email, :city, :recent_company, :current, :job_title, :expertise)
     end
+
 end

@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi, <%= @friend.name %></h1>
+    <p>
+      A friend of yours thought you should hear about us.<br>
+    </p>
+    <p>
+      We are Consilium Intelligence and we are building the future of people. We are calling on all tech folks to help share their feedback on the features they would want from a platform like ours.<br>
+
+    </p>
+    <p>
+      Visit our <%= link_to 'page', 'https://consilium-tech.herokuapp.com/' %> to sign up for updates or reply to this email if you'd like to get in direct contact with us.<br>
+    </p>
+
+    <p>Your friend's message:</p>
+    <%= @friend.message %>
+    <%# <p>
+      To login to the site, just follow this link: <%= @url %>
+    <%# </p> %>
+    <p>Thanks you and have a great day!</p>
+  </body>
+</html>
