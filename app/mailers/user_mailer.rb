@@ -17,4 +17,14 @@ class UserMailer < ApplicationMailer
         mail(to: 'jvelis@consiliumintelligence.com', subject: 'Someone just registered for tech updates!')
     end
 
+    def friend_email
+        @friend = params[:friend]
+        email_with_name = %("#{@friend.name}" <#{@friend.email}>)
+        mail(to: email_with_name, subject: 'Your friend thought you would find us interesting')
+    end
+
+    def shared_email_consilium
+        @friend = params[:friend]
+        mail(to: 'jvelis@consiliumintelligence.com', subject: 'Someone just shared our link!')
+    end
 end

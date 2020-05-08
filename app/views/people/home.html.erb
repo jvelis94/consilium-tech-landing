@@ -75,6 +75,18 @@
           <%= f.input :expertise, label: false, placeholder: 'Back-End' %>
           <%= f.button :submit, 'Stay in the loop!', class: 'btn btn-primary'%>
     <% end %>
+    <br>
+    <br>
+    <h6>Or share with: </h6>
+          <%= simple_form_for @friend do |f| %>
+            <%= f.label "Name:" %>
+            <%= f.input :name, placeholder: 'First name', label: false, error: 'Name is mandatory, please specify one', input_html: {id:'sign-up-form'} %>
+            <%= f.label "Email:" %>
+            <%= f.input :email, label: false, placeholder: 'email@address.com' %>
+            <%= f.label "Message:" %>
+            <%= f.input :message, placeholder: 'Message', label: false %>
+            <%= f.button :submit, 'Share', class: 'btn btn-primary'%>
+          <% end %>
   </div>
   
 </div>
