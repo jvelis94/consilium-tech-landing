@@ -17,7 +17,7 @@
         <i class="fa fa-user card-img-top"></i>
         <div class="card-body">
           <h4 class="card-title">Talented individuals</h4>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <p class="card-text">We believe world class businesses are powered by world class people</p>
 
         </div>
       </div>
@@ -27,7 +27,7 @@
         <i class="material-icons">supervised_user_circle</i>
         <div class="card-body">
           <h4 class="card-title">Recruiters</h4>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <p class="card-text">Our platform will enable recruiting teams to find, track and hire world class talent</p>
 
         </div>
       </div>
@@ -36,8 +36,8 @@
       <div class="card">
         <i class="material-icons">insert_chart_outlined</i>
         <div class="card-body">
-          <h4 class="card-title">Strategy teams</h4>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <h4 class="card-title">Leadership teams</h4>
+          <p class="card-text">Business heads can leverage our proprietary data to make business decisions and connect with other leaders in their industry</p>
         </div>
       </div>
     </li>
@@ -46,7 +46,7 @@
         <i class="material-icons">business_center</i>
         <div class="card-body">
           <h4 class="card-title">Salespeople</h4>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <p class="card-text">Find valuable insight about your current and potential clients, while also keeping a record of wins and leads</p>
         </div>
       </div>
     </li>
@@ -55,7 +55,8 @@
 
 <div class="banner2" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.1)), url(https://res.cloudinary.com/dkaewt5w0/image/upload/v1588884269/gln4eiv21lawvwcygaaj.jpg);">
   <div id='form-container'>
-    <h4>Lets build the future of people together</h4>
+    <h4>Sign up for updates!</h4>
+    <h5>Lets build the future of people together</h5>
     <br>
     <%= simple_form_for @person do |f| %>
           <%= f.label "First name:" %>
@@ -73,6 +74,10 @@
           <%= f.input :job_title, collection: ['Software', 'DevOps', 'IT', 'Product', 'Management', 'Other'], label: false %>
           <%= f.label "Expertise:" %>
           <%= f.input :expertise, label: false, placeholder: 'Back-End' %>
+          <%= f.label "LinkedIn:" %>
+          <%= f.input :linkedin, label: false, placeholder: 'optional' %>
+          <%= f.label "GitHub:" %>
+          <%= f.input :github, label: false, placeholder: 'optional' %>
           <%= f.button :submit, 'Stay in the loop!', class: 'btn btn-primary'%>
     <% end %>
     <br>
@@ -93,6 +98,7 @@
             <%= f.input :message, placeholder: 'Message', label: false %>
             <div class='share-item'>
             <%= f.button :submit, 'Share', class: 'btn btn-primary'%>
+            </div>
           <% end %>
   </div>
   

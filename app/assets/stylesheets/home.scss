@@ -45,16 +45,22 @@ width: 75%
     // justify-content: space-between;
 }
 
-.material-icons, i {
+#about-us li {
+    background-color: #F6FAFC;
+    padding: 24px;
+    border-radius: 10px;
+}
+
+.material-icons, .fa-user {
     font-size: 100px !important;
     text-align: center;
     color: #34373D;
 }
 
 .card {
-    padding: 12px;
-    border-radius: 8px;
     border: none;
+    background-color: #F6FAFC;
+    width: 18rem;
 }
 
 #benefits {
@@ -83,15 +89,10 @@ width: 75%
     margin: 0;
 }
 
-label, h5 {
+label, h4 {
     margin: 0;
     padding-top: 4px;
     font-weight: bold;
-}
-
-.card {
-    background-color: #F6FAFC;
-    width: 18rem;
 }
 
 .collection_radio_buttons {
@@ -102,6 +103,7 @@ label, h5 {
 .banner2 {
     padding: 32px;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .justify-content-center {
