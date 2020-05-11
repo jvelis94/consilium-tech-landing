@@ -39,6 +39,48 @@ header {
     padding: 12px 40px;
 }
 
+.common-footer {
+    padding: 24px 50px;
+    border-top: 1px solid #eaeffa;
+    background: #252e3a;
+    position: relative;
+    color: #ffffff;
+}
+
+.common-footer .row {
+    display: flex;
+    justify-content: space-between;
+}
+.common-footer ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    color: #ffffff;
+}
+
+.common-footer #terms {
+    width: 25%;
+}
+
+.common-footer #social {
+    width: 10%;
+}
+
+.fa-linkedin, .fa-twitter, .fa-facebook-official, .fa-instagram, .fa-youtube {
+    color: #ffffff;
+    font-size: 32px !important;
+}
+
+.common-footer a {
+    color: #ffffff;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.common-footer a:hover {
+    color: #49B9B2;
+}
+
 @media (max-width: 1200px) {
     .home-img {
         width: 75%; 
@@ -51,5 +93,27 @@ header {
 
     .container-landing h1 {
         height: 600px;
+    }
+
+    .common-footer .row {
+        display: block;
+    }
+
+    .common-footer ul {
+        display: block;
+    }
+
+    .common-footer li, .common-footer h6, .common-footer p{
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .common-footer #terms {
+        width: 100%;
+    }
+
+    .common-footer #social {
+        display: flex;
+        width: 100%;
     }
 }
