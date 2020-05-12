@@ -4,11 +4,13 @@
   <head>
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
-  <body>
-    <h1>Welcome to Consilium, <%= @person.first_name %></h1>
+  <body style='text-align: center'>
+    <%= cl_image_tag("logoC_qfffsu.png", width: 400) %>
+    <h2>Welcome to Consilium, <%= @person.first_name %></h2>
     <p>
-      You have successfully signed up to receive updates on our exciting new platform.<br>
+      You have successfully signed up to receive updates about our exciting new platform.<br>
     </p>
+
     <%# <p>
       To login to the site, just follow this link: <%= @url %>
     <%# </p> %>

@@ -55,8 +55,8 @@
 
 <div class="banner2" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.1)), url(https://res.cloudinary.com/dkaewt5w0/image/upload/v1588884269/gln4eiv21lawvwcygaaj.jpg);">
   <div id='form-container'>
-    <h4>Sign up for updates!</h4>
-    <h5>Lets build the future of people together</h5>
+    <h4>Lets build the future of people together</h4>
+    <p>Sign up for updates!</p>
     <br>
     <%= simple_form_for @person do |f| %>
           <%= f.label "First name:" %>
@@ -70,6 +70,7 @@
           <%= f.label "Current or Most Recent Company:" %>
           <%= f.input :recent_company, label: false, placeholder: 'Consilium' %>
           <%= f.collection_radio_buttons :current, [[true, 'Current employer'], [false, 'Last Employer']], :first, :last, input_html: { class: 'buttons' }%> 
+          <br>
           <%= f.label "Job Function:", class:'job_function' %>
           <%= f.input :job_title, collection: ['Software', 'DevOps', 'IT', 'Product', 'Management', 'Other'], label: false %>
           <%= f.label "Expertise:" %>
@@ -89,7 +90,7 @@
             <%= f.label "Name:" %>
             <%= f.input :name, placeholder: 'First name', label: false, error: 'Name is mandatory, please specify one', input_html: {id:'sign-up-form'} %>
             </div>
-            <div class='share-item'>
+            <div class='share-item2'>
             <%= f.label "Email:" %>
             <%= f.input :email, label: false, placeholder: 'email@address.com' %>
             </div>
