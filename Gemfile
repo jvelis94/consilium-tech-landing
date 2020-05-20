@@ -58,4 +58,7 @@ gem "font-awesome-rails"
 gem 'font_awesome5_rails'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.12.0'
+gem 'jquery-rails'
+gem 'ahoy_matey'
+
 
