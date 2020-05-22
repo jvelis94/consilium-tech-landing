@@ -39,14 +39,31 @@ width: 75%
 
 #about-us {
     list-style-type: none;
-    display: flex;
-    justify-content: space-around;
+    // display: flex;
+    // justify-content: space-around;
     padding:0
     // justify-content: space-between;
 }
 
+.item-words {
+    // width: 90%;
+    padding: 24px;
+}
+
+.items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.items img {
+    border-radius: 5px;
+}
+
 #about-us li {
-    background-color: #F6FAFC;
+    // background-color: #F6FAFC;
     padding: 24px;
     border-radius: 10px;
 }
@@ -74,11 +91,11 @@ width: 75%
 
 #form-container {
     // display: flex;
-    margin: 75px;
+    margin: 24px auto;
     // justify-content: center;
     // align-items: center;
     padding: 48px;
-    width: 550px;
+    width: 50%;
     background-color: #F6FAFC;
     border-radius: .25rem;
     border: 1px solid rgba(0,0,0,.125)
@@ -120,12 +137,22 @@ label, h4 {
     // justify-content: space-between;
 }
 
-.share-item2 {
-    margin-left: 12px;
+// .share-item2 {
+//     margin-left: 12px;
+// }
+.mobile {
+    display: none;
 }
 
-
 @media (max-width: 1200px) {
+    .full-screen {
+        display: none;
+    }
+
+    .mobile {
+        display: contents;
+    }
+
     .banner h1 {
         margin-bottom: 4px;
         color: white;
@@ -143,18 +170,28 @@ label, h4 {
     width: 75%
     }
 
-    #about-us {
-        display: flex;
-        flex-direction: column;
-        // text-align: center;    
-        align-items: center;
-    }
+    // #about-us {
+    //     display: flex;
+    //     flex-direction: column;
+    //     // text-align: center;    
+    //     align-items: center;
+    // }
 
     #about-us li {
         padding: 32px;
         // display: inline-block;
         // margin: 0 auto;
     }
+
+    .items {
+        display: block;
+        // justify-content: space-between;
+        // align-items: center;
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
     .card {
         width: 80%;
         margin: 0 auto;
@@ -178,7 +215,7 @@ label, h4 {
     }
 
     p {
-        font-size: 2em;
+        font-size: 1.5em;
     }
 
     .material-icons, i {
