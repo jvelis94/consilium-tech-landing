@@ -123,10 +123,13 @@ Rails.application.configure do
   #   authentication: "plain",
   #   enable_starttls_auto: true
   # }
-  Rails.application.configure do
+  
 
-    config.action_mailer.delivery_method = :smtp
-    config.action_mailer.default_url_options = { host: "consilium-tech.herokuapp.com" }
-    # or your custom domain name eg. "www.yourdomain.com"
-  end
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_url_options = { host: "consilium-tech.herokuapp.com" }
+  # or your custom domain name eg. "www.yourdomain.com"
+  
+  config.serve_static_files = true
+
+
 end

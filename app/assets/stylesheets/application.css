@@ -37,8 +37,9 @@ header {
 }
 .btn-nav {
     margin-right: 100px;
-    padding: 12px 40px;
+    padding: 16px 42px;
 }
+
 
 .common-footer {
     padding: 24px 50px;
@@ -84,7 +85,7 @@ header {
 
 @media (max-width: 1200px) {
     .home-img {
-        width: 75%; 
+        width: 50%; 
         margin: 48px 24px;
     }
 
@@ -92,8 +93,8 @@ header {
         display: none;
     }
 
-    .container-landing h1 {
-        height: 600px;
+    .container-landing {
+        margin-top: 200px;
     }
 
     .common-footer .row {
