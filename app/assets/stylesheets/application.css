@@ -83,9 +83,9 @@ header {
     color: #49B9B2;
 }
 
-@media (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
     .home-img {
-        width: 50%; 
+        width: 40%; 
         margin: 48px 24px;
     }
 
@@ -118,4 +118,42 @@ header {
         display: flex;
         width: 100%;
     }
+}
+
+@media screen and (max-width: 600px) {
+    .home-img {
+        width: 85%; 
+        /* margin: 48px 24px; */
+    }
+
+    .btn-nav {
+        display: none;
+    }
+
+    .container-landing {
+        margin-top: 0px;
+        margin-left: 50px;
+    }
+
+    #benefits {
+        font-size: 2.5em;
+        padding: 48px;
+    }
+
+    .item-words h2 {
+        font-size: 2.5em;
+    }
+
+    #about-us li {
+        padding: 24px 24px 48px 24px;
+    }
+
+    .item-words {
+        padding: 0;
+    }
+
+    .items {
+        width: 100%;
+    }
+    
 }

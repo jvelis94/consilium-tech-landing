@@ -273,4 +273,27 @@ label, h4 {
     .share-item2 {
         margin-left: 0;
     }
+
+    .container-landing {
+        margin-top: 0px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .items-img {
+        width: 300px;
+    }
+    
+    .banner h1 {
+        font-size: 2em;
+    }
+
+    #form-container h4 {
+        font-size: 2em;
+    }
+
+    .banner2 {
+        padding: 24px;
+    }
+    
 }
