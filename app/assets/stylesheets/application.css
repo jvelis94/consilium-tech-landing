@@ -25,7 +25,7 @@ body {
 }
 
 .home-img {
-    width: 24%; 
+    width: 20%; 
     margin: 12px 24px;
 }
 
@@ -42,7 +42,7 @@ header {
 
 
 .common-footer {
-    padding: 24px 50px;
+    padding: 12px 50px;
     border-top: 1px solid #eaeffa;
     background: #252e3a;
     position: relative;
@@ -52,6 +52,7 @@ header {
 .common-footer .row {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .common-footer ul {
     list-style-type: none;
@@ -61,7 +62,12 @@ header {
 }
 
 .common-footer #terms {
-    width: 50%;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.row h6, .row p, #social {
+    margin: 0;
 }
 
 .common-footer #social {
@@ -70,7 +76,7 @@ header {
 
 .fa-linkedin, .fa-twitter, .fa-facebook-official, .fa-instagram, .fa-youtube {
     color: #ffffff;
-    font-size: 32px !important;
+    font-size: 24px !important;
 }
 
 .common-footer a {
@@ -89,9 +95,9 @@ header {
         margin: 48px 24px;
     }
 
-    .btn-nav {
+    /* .btn-nav {
         display: none;
-    }
+    } */
 
     .container-landing {
         margin-top: 200px;
@@ -126,9 +132,13 @@ header {
         margin: 12px;
     }
 
-    .btn-nav {
-        display: none;
+    .banner {
+        padding: 100px 0px;
     }
+
+    /* .btn-nav {
+        display: none;
+    } */
 
     .container-landing {
         margin-top: 0px;
