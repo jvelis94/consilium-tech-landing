@@ -170,5 +170,14 @@ header {
     .items {
         width: 100%;
     }
+
+    .common-footer li, .common-footer h6, .common-footer p{
+        font-size: 12px;
+        text-align: center;
+    }
+
+    #terms {
+        padding: 0px;
+    }
     
 }
