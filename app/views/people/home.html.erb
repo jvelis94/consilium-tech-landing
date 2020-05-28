@@ -99,9 +99,9 @@
           <%= f.input :email, label: false, placeholder: 'email@address.com' %>
           <%= f.label "City:" %>
           <%= f.input :city, label: false, placeholder: 'San Francisco' %>
-          <%= f.label "Current or Most Recent Company:" %>
+          <%= f.label "Current/Recent Company:" %>
           <%= f.input :recent_company, label: false, placeholder: 'Consilium' %>
-          <%= f.collection_radio_buttons :current, [[true, 'Current employer'], [false, 'Last Employer']], :first, :last, input_html: { class: 'buttons' }%> 
+          <%= f.collection_radio_buttons :current, [[true, 'Current'], [false, 'Recent']], :first, :last, input_html: { class: 'buttons' }%> 
           <br>
           <%= f.label "Job Function:", class:'job_function' %>
           <%= f.input :job_title, collection: ['Software', 'DevOps', 'IT', 'Product', 'Management', 'Other'], label: false %>
