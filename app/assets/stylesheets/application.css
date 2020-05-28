@@ -92,7 +92,7 @@ header {
 @media screen and (max-width: 1200px) {
     .home-img {
         width: 40%; 
-        margin: 48px 24px;
+        margin: 12px 24px;
     }
 
     /* .btn-nav {
