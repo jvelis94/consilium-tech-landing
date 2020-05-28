@@ -122,8 +122,8 @@ header {
 
 @media screen and (max-width: 600px) {
     .home-img {
-        width: 85%; 
-        /* margin: 48px 24px; */
+        width: 75%; 
+        margin: 12px;
     }
 
     .btn-nav {
@@ -142,14 +142,19 @@ header {
 
     .item-words h2 {
         font-size: 2.5em;
+        font-weight: 600;
     }
 
     #about-us li {
-        padding: 24px 24px 48px 24px;
+        padding: 24px 24px 60px 24px;
     }
 
     .item-words {
         padding: 0;
+    }
+
+    .item-words p {
+        font-size: 1.3em;
     }
 
     .items {
