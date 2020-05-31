@@ -103,13 +103,14 @@ width: 75%
 #form-container {
     // display: flex;
     margin: 24px auto;
+    width: 90%;
     // justify-content: center;
     // align-items: center;
-    padding: 48px;
-    width: 50%;
-    background-color: #F6FAFC;
-    border-radius: .25rem;
-    border: 1px solid rgba(0,0,0,.125)
+    // padding: 48px;
+    // width: 50%;
+    // background-color: #F6FAFC;
+    // border-radius: .25rem;
+    // border: 1px solid rgba(0,0,0,.125)
 }
 
 .input {
@@ -129,9 +130,15 @@ label, h4 {
 }
 
 .banner2 {
-    padding: 32px;
+    padding-bottom: 50px;
     background-size: cover;
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-around;
+}
+
+.modal-body {
+    padding: 0px;
 }
 
 .justify-content-center {
@@ -231,11 +238,13 @@ label, h4 {
 
     .banner2 {
         padding: 75px;
-    }
-    
-    #form-container {
+        width: 50%;
         margin: 0 auto;
     }
+    
+    // #form-container {
+    //     margin: 0 auto;
+    // }
 
     h4 {
         font-size: 3em;
@@ -258,9 +267,9 @@ label, h4 {
         font-weight: 500;
     }
 
-    #form-container {
-        width: 100%;
-    }
+    // #form-container {
+    //     width: 100%;
+    // }
 
     label.job_function {
         display: block;
