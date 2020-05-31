@@ -6,6 +6,8 @@
 // import { fas } from '@fortawesome/free-solid-svg-icons'
 // import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 // library.add(fas, faTwitter)
+require("jquery")
+
 import ahoy from "ahoy.js";
 require("@rails/ujs").start()
 require("turbolinks").start()
@@ -14,6 +16,19 @@ require("channels")
 import { loadDynamicBannerText } from '../components/banner';
 
 loadDynamicBannerText();
+
+// $('#exampleModalLong').on('shown.bs.modal', function () {
+//     $('#myInput').trigger('focus')
+//   })
+// $(document).ready(function(){
+//     // Show the Modal on load
+//     $("#exampleModalLong").modal("show");
+      
+//     // Hide the Modal
+//     $("#myBtn").click(function(){
+//       $("#myBtn").modal("hide");
+//     });
+//   });
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)

@@ -6,13 +6,96 @@
     <h1 id='resize'><span id="banner-typed-text"></span></h1>
     <p>Taking the best pieces of recruitment, business intelligence and CRM tools, Consilium Technology is building a new global technology community that connects world class talent with world class firms.</p>
     <br>
-    <%= link_to 'Sign up!', '#form-container', class: "btn btn-primary btn-nav", style: "font-size: 1.2em"%>
+    <button type="button" id="myBtn" class="btn btn-primary btn-nav" data-toggle="modal" data-target="#signup" style= "font-size: 1.2em">
+      Sign Up
+    </button>
+    <%# <%= link_to 'Sign up!', '#form-container', id: "myBtn", class: "btn btn-primary btn-nav", style: "font-size: 1.2em"%>
+    <!-- Modal -->
+    <div class="modal fade" id="signup" tabindex="-1" role="dialog" aria-labelledby="signupTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="signupTitle">Sign up for updates</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div id='form-container'>
+              <%= simple_form_for @person do |f| %>
+                    <%= f.label "First name:" %>
+                    <%= f.input :first_name, placeholder: 'First name', label: false, error: 'Name is mandatory, please specify one', input_html: {id:'sign-up-form'} %>
+                    <%= f.label "Last name:" %>
+                    <%= f.input :last_name, placeholder: 'Last Name', label: false %>
+                    <%= f.label "Email:" %>
+                    <%= f.input :email, label: false, placeholder: 'email@address.com' %>
+                    <%= f.label "City:" %>
+                    <%= f.input :city, label: false, placeholder: 'San Francisco' %>
+                    <%= f.label "Current/Recent Company:" %>
+                    <%= f.input :recent_company, label: false, placeholder: 'Consilium' %>
+                    <%= f.collection_radio_buttons :current, [[true, 'Current'], [false, 'Recent']], :first, :last, input_html: { class: 'buttons' }%> 
+                    <br>
+                    <%= f.label "Job Function:", class:'job_function' %>
+                    <%= f.input :job_title, collection: ['Software', 'DevOps', 'IT', 'Product', 'Management', 'Other'], label: false %>
+                    <%= f.label "Expertise:" %>
+                    <%= f.input :expertise, label: false, placeholder: 'Back-End' %>
+                    <%= f.label "LinkedIn:" %>
+                    <%= f.input :linkedin, label: false, placeholder: 'optional' %>
+                    <%= f.label "GitHub:" %>
+                    <%= f.input :github, label: false, placeholder: 'optional' %>
+                    <div class="modal-footer">
+                      <%= f.button :submit, 'Stay in the loop!', class: 'btn btn-primary'%>
+                    </div>
+              <% end %>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- Modal -->
+    <div class="modal fade" id="share" tabindex="-1" role="dialog" aria-labelledby="share" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="share">Share with others in the community</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div id='form-container'>
+                    <%= simple_form_for @friend do |f|%>
+                    <div id='share-container'>
+                      <div class='share-item'>
+                      <%= f.label "Name:" %>
+                      <%= f.input :name, placeholder: 'First name', label: false, error: 'Name is mandatory, please specify one', input_html: {id:'sign-up-form'} %>
+                      <%= f.label "Email:" %>
+                      <%= f.input :email, label: false, placeholder: 'email@address.com' %>
+                      </div>
+                    </div>
+                      <%= f.label "Message:" %>
+                      <%= f.input :message, placeholder: 'Message', label: false %>
+                      <div class='share-item'>
+                        <div class="modal-footer">
+                          <%= f.button :submit, 'Share', class: 'btn btn-primary'%>
+                        </div>
+                      </div>
+                    <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
 
 
-<div class="justify-content-center">
+<div>
   <h1 id='benefits'>Benefits for everyone</h1>
   <ul id='about-us' class='mobile' >
     <li class='items'>
@@ -85,51 +168,13 @@
   </ul>
 </div>
 
-<div class="banner2" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.1)), url(https://res.cloudinary.com/dkaewt5w0/image/upload/v1588884269/gln4eiv21lawvwcygaaj.jpg);">
-  <div id='form-container'>
-    <h5>Sign up for updates</h5>
-    <br>
-    <%= simple_form_for @person do |f| %>
-          <%= f.label "First name:" %>
-          <%= f.input :first_name, placeholder: 'First name', label: false, error: 'Name is mandatory, please specify one', input_html: {id:'sign-up-form'} %>
-          <%= f.label "Last name:" %>
-          <%= f.input :last_name, placeholder: 'Last Name', label: false %>
-          <%= f.label "Email:" %>
-          <%= f.input :email, label: false, placeholder: 'email@address.com' %>
-          <%= f.label "City:" %>
-          <%= f.input :city, label: false, placeholder: 'San Francisco' %>
-          <%= f.label "Current/Recent Company:" %>
-          <%= f.input :recent_company, label: false, placeholder: 'Consilium' %>
-          <%= f.collection_radio_buttons :current, [[true, 'Current'], [false, 'Recent']], :first, :last, input_html: { class: 'buttons' }%> 
-          <br>
-          <%= f.label "Job Function:", class:'job_function' %>
-          <%= f.input :job_title, collection: ['Software', 'DevOps', 'IT', 'Product', 'Management', 'Other'], label: false %>
-          <%= f.label "Expertise:" %>
-          <%= f.input :expertise, label: false, placeholder: 'Back-End' %>
-          <%= f.label "LinkedIn:" %>
-          <%= f.input :linkedin, label: false, placeholder: 'optional' %>
-          <%= f.label "GitHub:" %>
-          <%= f.input :github, label: false, placeholder: 'optional' %>
-          <%= f.button :submit, 'Stay in the loop!', class: 'btn btn-primary'%>
-    <% end %>
-    <br>
-    <br>
-    <h6>Or share with: </h6>
-          <%= simple_form_for @friend do |f|%>
-          <div id='share-container'>
-            <div class='share-item'>
-            <%= f.label "Name:" %>
-            <%= f.input :name, placeholder: 'First name', label: false, error: 'Name is mandatory, please specify one', input_html: {id:'sign-up-form'} %>
-            <%= f.label "Email:" %>
-            <%= f.input :email, label: false, placeholder: 'email@address.com' %>
-            </div>
-          </div>
-            <%= f.label "Message:" %>
-            <%= f.input :message, placeholder: 'Message', label: false %>
-            <div class='share-item'>
-            <%= f.button :submit, 'Share', class: 'btn btn-primary'%>
-            </div>
-          <% end %>
-  </div>
+<div class="banner2">
+  <button type="button" id="myBtn" class="btn btn-primary btn-nav" data-toggle="modal" data-target="#signup">
+    Sign Up
+  </button>
+  <button type="button" id="myBtn" class="btn btn-primary btn-nav" data-toggle="modal" data-target="#share">
+    Share
+  </button>
+</div>
   
 </div>

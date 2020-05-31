@@ -15,6 +15,7 @@
  */
  /*
  *= require font-awesome
+ 
  */
 
 
@@ -36,7 +37,7 @@ header {
     /* position: fixed; */
 }
 .btn-nav {
-    margin-right: 100px;
+    /* margin-right: 50px; */
     padding: 16px 42px;
 }
 
@@ -136,9 +137,9 @@ header {
         padding: 100px 0px;
     }
 
-    /* .btn-nav {
-        display: none;
-    } */
+    .btn-nav {
+        padding: 8px 12px;
+    }
 
     .container-landing {
         margin-top: 0px;
