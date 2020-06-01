@@ -25,24 +25,40 @@
               <%= simple_form_for @person do |f| %>
                     <%= f.label "First name:" %>
                     <%= f.input :first_name, placeholder: 'First name', label: false, error: 'Name is mandatory, please specify one', input_html: {id:'sign-up-form'} %>
+                    <br>
                     <%= f.label "Last name:" %>
                     <%= f.input :last_name, placeholder: 'Last Name', label: false %>
+                    <br>
                     <%= f.label "Email:" %>
                     <%= f.input :email, label: false, placeholder: 'email@address.com' %>
+                    <br>
                     <%= f.label "City:" %>
                     <%= f.input :city, label: false, placeholder: 'San Francisco' %>
+                    <br>
                     <%= f.label "Current/Recent Company:" %>
                     <%= f.input :recent_company, label: false, placeholder: 'Consilium' %>
                     <%= f.collection_radio_buttons :current, [[true, 'Current'], [false, 'Recent']], :first, :last, input_html: { class: 'buttons' }%> 
                     <br>
                     <%= f.label "Job Function:", class:'job_function' %>
-                    <%= f.input :job_title, collection: ['Software', 'DevOps', 'IT', 'Product', 'Management', 'Other'], label: false %>
+                    <%= f.input :job_title, collection: Person::JOB_TITLE, label: false, input_html: { onchange:"getDropdownValue()"} %>
                     <%= f.label "Expertise:" %>
-                    <%= f.input :expertise, label: false, placeholder: 'Back-End' %>
+                    <br>
+                    <%= f.input :expertise, collection: [], label: false  %>
+                    <%#= f.input :expertise, collection: ['Front-End', 'Back-End','Full-Stack', 'Machine Learning', 'Mobile', 'Security', 'AR/VR', 'Blockchain', 'Gaming', 'Search']  %>
+                    <%#= f.input :expertise, collection: ['Data Scientist', 'Data Analyst','Business Analyst', 'Business Operations']   %>
+                    <%#= f.input :expertise, collection: ['Build Engineer', 'Release Engineer','Site Reliability Engineer', 'QA Test Automation Engineer', 'QA Manual Test Engineer']   %>
+                    <%#= f.input :expertise, collection: ['DB Admin', 'Desktop Support','Network Admin', 'Salesforce Dev', 'Solutions Engineer', 'Business Systems Engineer', 'Systems Admin']   %>
+                    <%#= f.input :expertise, collection: ['IT Project Manager', 'Program Manager','Product Manager', 'Brand / Graphic Design', 'UX Design', 'UX Research', 'Visual / UI Design', 'Product Design']   %>
+                    <%#= f.input :expertise, collection: ['CEO', 'CTO','CMO', 'CFO', 'Head of IT', 'Head of Security', 'Head of BD / Sales', 'Head of People', 'Head of Product']   %>
+                    <%#= f.input :expertise, label: false %>
+                    <br>
+                    <%# <%= f.input :expertise, label: false, placeholder: 'Back-End',onchange:"getDropdownValue()"%>
                     <%= f.label "LinkedIn:" %>
                     <%= f.input :linkedin, label: false, placeholder: 'optional' %>
+                    <br>
                     <%= f.label "GitHub:" %>
                     <%= f.input :github, label: false, placeholder: 'optional' %>
+                    <br>
                     <div class="modal-footer">
                       <%= f.button :submit, 'Stay in the loop!', class: 'btn btn-primary'%>
                     </div>

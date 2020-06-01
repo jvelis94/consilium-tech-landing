@@ -17,18 +17,53 @@ import { loadDynamicBannerText } from '../components/banner';
 
 loadDynamicBannerText();
 
-// $('#exampleModalLong').on('shown.bs.modal', function () {
-//     $('#myInput').trigger('focus')
-//   })
-// $(document).ready(function(){
-//     // Show the Modal on load
-//     $("#exampleModalLong").modal("show");
-      
-//     // Hide the Modal
-//     $("#myBtn").click(function(){
-//       $("#myBtn").modal("hide");
-//     });
-//   });
+window.getDropdownValue = function() {
+    let job_function = document.getElementById('person_job_title').value
+    // document.querySelector("label[for='person_Expertise:']").style.display = "contents"
+    let expertise_select = document.querySelector('#person_expertise')
+    let expertise_div = document.querySelector(".person_expertise")
+    let job_title_expertise_mapping = {
+        "Software Engineer": ['Front-End', 'Back-End','Full-Stack', 'Machine Learning', 'Mobile', 'Security', 'AR/VR', 'Blockchain', 'Gaming', 'Search'],
+        "Data Science": ['Data Scientist', 'Data Analyst','Business Analyst', 'Business Operations'],
+        "DevOps": ['Build Engineer', 'Release Engineer','Site Reliability Engineer', 'QA Test Automation Engineer', 'QA Manual Test Engineer'],
+        "IT": ['DB Admin', 'Desktop Support','Network Admin', 'Salesforce Dev', 'Solutions Engineer', 'Business Systems Engineer', 'Systems Admin'],
+        "Product": ['IT Project Manager', 'Program Manager','Product Manager', 'Brand / Graphic Design', 'UX Design', 'UX Research', 'Visual / UI Design', 'Product Design'],
+        "Management": ['CEO', 'CTO','CMO', 'CFO', 'Head of IT', 'Head of Security', 'Head of BD / Sales', 'Head of People', 'Head of Product']
+    }
+    
+    if (job_function != "Other") {
+        if (expertise_select == null) {
+            let remove_input = document.querySelector("input[name='person[expertise]']")
+            remove_input == null ? console.log('already deleted') : remove_input.parentNode.removeChild(remove_input)
+            expertise_select = document.createElement('select')
+            expertise_select.name = "person[expertise]"
+            expertise_select.setAttribute("id", "person_expertise")
+            expertise_div.append(expertise_select)
+        }
+        else {
+            while (expertise_select.length > 0) {
+                expertise_select.remove(expertise_select.length-1);
+            }
+            
+        }
+
+        job_title_expertise_mapping[job_function].forEach(expertise => {
+            let option = document.createElement('option')
+            option.value = expertise
+            option.text = expertise
+            expertise_select.appendChild(option)
+        })
+    } 
+    else {
+        // let expertise_select = document.querySelector('#person_expertise')
+        expertise_select.parentNode.removeChild(expertise_select)
+        let input = document.createElement("input")
+        input.name = "person[expertise]"
+        expertise_div.append(input)
+        console.log(expertise_select)
+    }
+}
+
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
