@@ -63,8 +63,8 @@ header {
 }
 
 .common-footer #terms {
-    width: 70%;
-    margin: 0 auto;
+    width: 65%;
+    margin: 0;
 }
 
 .row h6, .row p, #social {
@@ -82,7 +82,7 @@ header {
 
 .common-footer a {
     color: #ffffff;
-    font-weight: 800;
+    /* font-weight: 800; */
     text-decoration: none;
 }
 
@@ -125,6 +125,7 @@ header {
         display: flex;
         width: 100%;
     }
+
 }
 
 @media screen and (max-width: 600px) {
